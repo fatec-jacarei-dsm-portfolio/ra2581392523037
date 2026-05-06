@@ -1,0 +1,54 @@
+.page {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+  min-height: 100svh;
+  padding: 2.2rem 0 3rem;
+}
+
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 2rem; }
+.brand { margin: 0; font-size: 1.9rem; font-weight: 800; }
+.menu { display: flex; gap: 1.3rem; list-style: none; padding: 0; margin: 0; flex-wrap: wrap; align-items: center; }
+.menu li { display: flex; }
+.menuLink { display: inline-flex; align-items: center; min-height: 2rem; opacity: 0.8; font-size: 0.92rem; transition: color 0.2s ease, opacity 0.2s ease; }
+.menuLink:hover, .menuLink[aria-current="page"], .active { opacity: 1; color: var(--primary); }
+
+.section {
+  min-height: calc(100svh - 9rem);
+  display: grid;
+  align-content: center;
+  gap: 1.6rem;
+  max-width: 48rem;
+}
+
+.section h1 {
+  margin: 0;
+  font-size: clamp(2.1rem, 7vw, 3.9rem);
+  color: var(--primary);
+}
+
+.section p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.timeline {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.timeline article {
+  border-left: 2px solid var(--line-guide);
+  padding: 0.5rem 0 0.5rem 1rem;
+  background: var(--bg-timeline);
+}
+
+.timeline h2 {
+  margin: 0;
+  color: var(--text-on-primary);
+  font-size: 1.05rem;
+}
+
+@media (max-width: 860px) {
+  .page { width: min(94vw, 44rem); }
+}

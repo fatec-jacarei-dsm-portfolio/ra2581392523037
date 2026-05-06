@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  /* Base palette */
+  --palette-blue-900: #1b213f;
+  --palette-blue-850: #1e2345;
+  --palette-blue-800: #202547;
+  --palette-blue-700: #252b53;
+  --palette-blue-650: #262c56;
+  --palette-blue-600: #2f3563;
+  --palette-blue-500: #4f588e;
+  --palette-blue-450: #374071;
+  --palette-blue-400: #333b6b;
+  --palette-blue-350: #2d3462;
+  --palette-blue-300: #252c54;
+  --palette-blue-250: #1d2243;
+  --palette-text-100: #f8f9ff;
+  --palette-text-200: #f4f6ff;
+  --palette-text-500: #9aa3cf;
+  --palette-accent-500: #ff4f68;
+  --palette-white: #ffffff;
+
+  /* Semantic tokens */
+  --primary: var(--palette-accent-500);
+  --text-primary: var(--palette-text-100);
+  --text-muted: var(--palette-text-500);
+  --text-on-primary: var(--palette-white);
+  --bg-page: var(--palette-blue-850);
+  --bg-gradient-top: var(--palette-blue-800);
+  --bg-gradient-bottom: var(--palette-blue-900);
+  --bg-glow-1: var(--palette-blue-600);
+  --bg-glow-2: var(--palette-blue-650);
+  --bg-surface: var(--palette-blue-700);
+  --bg-card-1: var(--palette-blue-350);
+  --bg-card-2: var(--palette-blue-300);
+  --bg-indicator: var(--palette-blue-250);
+  --border-default: var(--palette-blue-450);
+  --border-input: var(--palette-blue-400);
+  --line-guide: var(--palette-blue-500);
+  --overlay-soft: rgba(20, 26, 53, 0.78);
+  --bg-timeline: rgba(43, 50, 90, 0.45);
+
+  /* Backward compatibility with previous names */
+  --background: var(--bg-page);
+  --foreground: var(--text-primary);
+  --muted: var(--text-muted);
+  --accent: var(--primary);
+  --line: var(--line-guide);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at 14% 16%, var(--bg-glow-1) 0%, transparent 38%),
+    radial-gradient(circle at 88% 34%, var(--bg-glow-2) 0%, transparent 34%),
+    linear-gradient(180deg, var(--bg-gradient-top) 0%, var(--bg-gradient-bottom) 100%);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), "Segoe UI", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.route-transition {
+  min-height: 100%;
+  animation: page-enter 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (max-width: 862px) {
+  .route-transition {
+    padding-bottom: 3.6rem;
+  }
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
