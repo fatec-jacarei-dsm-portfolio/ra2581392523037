@@ -1,0 +1,68 @@
+.panel {
+  position: sticky;
+  top: 6.5rem;
+  align-self: start;
+  background: linear-gradient(160deg, var(--bg-card-1) 0%, var(--bg-card-2) 100%);
+  border: 1px solid var(--border-default);
+  border-radius: 1rem;
+  padding: 1.1rem;
+  max-width: 22rem;
+}
+
+.mediaWrap {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  border: 1px solid var(--border-default);
+  background: var(--bg-surface);
+}
+
+.text {
+  margin-top: 1rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--primary);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0.35rem 0 0;
+  font-size: 1.2rem;
+}
+
+.caption {
+  margin: 0.55rem 0 0;
+  color: var(--text-muted);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.chips {
+  margin: 0.95rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  border: 1px solid var(--border-default);
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: var(--bg-page);
+}
+
+@media (max-width: 960px) {
+  .panel {
+    position: static;
+    max-width: 100%;
+  }
+}

@@ -2,12 +2,10 @@ import { SiteHeader } from "@/src/components/SiteHeader";
 import styles from "./page.module.css";
 
 const services = [
-  "Git Version Control",
-  "App Design",
-  "Back-end Development",
-  "Web Development",
-  "Photography",
-  "Freelancing",
+  "Front-End Development",
+  "SIG Development",
+  "Back-End Development",
+  "DevOps",
 ];
 
 export default function ServicesPage() {

@@ -16,9 +16,9 @@ export default function Home() {
           <p className={styles.subtitle}>
             Software engineering specialist with strong experience in backend development, systems architecture, integrations, and building scalable solutions.
           </p>
-          <Link href="/portfolio" className={styles.cta}>
+          {/* <Link href="/portfolio" className={styles.cta}>
             Creator journey
-          </Link>
+          </Link> */}
         </div>
 
       </section>

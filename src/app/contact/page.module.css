@@ -15,7 +15,8 @@
 .section {
   min-height: calc(100svh - 9rem);
   display: grid;
-  align-content: center;
+  align-content: start;
+  padding-top: 0.35rem;
   max-width: 42rem;
 }
 
@@ -30,6 +31,31 @@
   color: var(--text-muted);
 }
 
+.whatsappButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: fit-content;
+  border: 1px solid var(--border-default);
+  background: var(--bg-card-1);
+  color: var(--text-primary);
+  padding: 0.72rem 1rem;
+  border-radius: 0.65rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.95rem;
+}
+
+.whatsappIcon {
+  font-size: 1.15rem;
+}
+
+.whatsappButton[aria-disabled="true"] {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
 .form {
   display: grid;
   gap: 0.8rem;
@@ -40,10 +66,24 @@
   width: 100%;
   border: 1px solid var(--border-input);
   background: var(--bg-surface);
-  color: var(--paleta-texto-200);
+  color: var(--palette-text-200);
   font-size: 1rem;
   padding: 1rem 1.1rem;
   font-family: inherit;
+}
+
+.feedbackSuccess,
+.feedbackError {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.feedbackSuccess {
+  color: #7cf0a3;
+}
+
+.feedbackError {
+  color: #ff9aaa;
 }
 
 .form button {
@@ -70,5 +110,6 @@
 
 @media (max-width: 900px) {
   .page { width: min(94vw, 44rem); }
+  .whatsappButton { width: 100%; }
   .form button { width: 100%; }
 }
